@@ -88,7 +88,7 @@ public:
         {
             uint8_t data = _serial->read();
 
-            if (data == PacketMarker)
+            if (data == PacketMarker && _recieveBufferIndex > 1)
             {
                 if (_onPacketFunction)
                 {
